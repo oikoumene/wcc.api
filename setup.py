@@ -34,6 +34,8 @@ setup(name='wcc.api',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
           'plone.app.versioningbehavior',
+          'plone.jsonapi.core',
+          'plone.jsonapi.routes',
           # -*- Extra requirements: -*-
       ],
       extras_require={
