@@ -82,6 +82,42 @@ Working test example:
      http://10.1.1.4:8080/Plone/en/@@API/plone/api/1.0/wccdocument/delete/06e8be0abb894ac4a88d32689c9c3fb9
 
 
+How to authenticate
+===================
+- Authentication use basic HTTP basic authentication
+
+- To authenticate the header must have 
+
+        Authorization: Basic userid:password
+
+  in the header where "userid:password" is encoded in base64
+
+- http://publib.boulder.ibm.com/infocenter/cicsts/v3r2/index.jsp?topic=%2Fcom.ibm.cics.ts.internet.doc%2Ftopics%2Fdfhtl2a.html
+
+
+Example Using Python
+====================
+This example use python library "requests" to post the data
+
+.. code-block:: python
+    import request
+    import json
+
+    #for getting data
+    payload = {'title': u'some new title'}
+    headers = {'Content-type': 'application/json'}
+
+    #request will auto encrypt it to base64
+    auth = {'admin', 'password'}
+
+
+    get_data = request.get("http://10.1.1.4:8080/Plone/en/@@API/plone/api/1.0/wccdocument", 
+                          headers=headers, auth=auth)
+
+
+    post_data = request.post("http://kulll:8080/Plone/en/@@API/plone/api/1.0/wccdocument/update/2a3bb9bc02264da7bf8f874d50bad69a", headers=headers, data=json.dumps(payload), auth=auth)
+
+
 
 
 Multilingual
