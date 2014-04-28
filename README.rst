@@ -68,17 +68,17 @@ Working test example:
 }
 
 2. For updating
-   - get the uid for the wccdocument using
-     http://10.1.1.4:8080/Plone/@@API/plone/api/1.0/wccdocuments/
-   - then append the uid behind to get to the specific wccdocument
+- get the uid for the wccdocument using
+  http://10.1.1.4:8080/Plone/@@API/plone/api/1.0/wccdocuments/
+- then append the uid behind to get to the specific wccdocument
      http://10.1.1.4:8080/Plone/@@API/plone/api/1.0/wccdocuments/06e8be0abb894ac4a88d32689c9c3fb9
-   - use the same json format as the one used for creating wccdocument to update
+- use the same json format as the one used for creating wccdocument to update
 
 
 3. For deleting
-   - get the uid for the wccdocument
+- get the uid for the wccdocument
      http://10.1.1.4:8080/Plone/@@API/plone/api/1.0/wccdocuments/
-   - append delete before the uid
+- append delete before the uid
      http://10.1.1.4:8080/Plone/en/@@API/plone/api/1.0/wccdocument/delete/06e8be0abb894ac4a88d32689c9c3fb9
 
 
@@ -99,7 +99,7 @@ Example Using Python
 ====================
 This example use python library "requests" to post the data
 
-.. code-block:: python
+
     import request
     import json
 
